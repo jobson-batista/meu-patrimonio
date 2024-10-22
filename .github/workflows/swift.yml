@@ -1,22 +1,40 @@
-# This workflow will build a Swift project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
-
-name: Swift
+name: Build
 
 on:
   push:
-    branches: [ "main", "develop" ]
+    branches:
+      - main  # Executa o workflow quando houver push na branch main
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main  # Executa o workflow quando houver PR na branch main
+      - develop
 
 jobs:
   build:
-
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+      - name: Baixar conteúdo do repositório para o ambiente
+        uses: actions/checkout@v2
+
+      - name: Definir versão do Xcode 16
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '16.0'
+
+      - name: Listar diretório atual # Instalando dependências
+        run: |
+          pwd
+          # Instale suas dependências aqui se necessário, por exemplo, CocoaPods ou Carthage
+          # pod install ou carthage update
+          
+      - name: Lista de simuladores disponíveis
+        run: xcrun simctl list devices
+        
+      - name: Build do Projeto
+        run: |
+          xcodebuild clean build \
+            -project "Meu Clima.xcodeproj" \
+            -scheme "Meu Clima" \
+            -destination 'platform=iOS Simulator,name=iPhone 14,OS=17.0.1' \
+            ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
