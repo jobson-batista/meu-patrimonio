@@ -12,10 +12,13 @@
 
 ### Tecnologias Utilizadas
 - **Swift**: Linguagem principal para desenvolvimento iOS.
-- **UIKit/SwiftUI**: Frameworks para criação da interface do usuário.
+- **UIKit**: Framework para criação da interface do usuário.
 - **Core Data**: Para armazenamento de dados local.
 - **ChartKit**: Para exibição de gráficos financeiros.
-
+- **Figma**: Para criação do Protótipo.
+- **Notion**: Para organizar e documentar processos.
+- **[AppIcon]([url](https://www.appicon.co/))**: Para gerar ícones do aplicativo.
+ 
 ### Estrutura do Projeto
 O projeto segue o padrão **MVC (Model-View-Controller)**:
 - **Model**: Lida com os dados, lógica de negócios e regras de cálculo.
