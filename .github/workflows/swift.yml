@@ -36,5 +36,6 @@ jobs:
           xcodebuild clean build \
             -project "Meu Patrimonio.xcodeproj" \
             -scheme "Meu Patrimonio" \
-            -destination 'platform=iOS Simulator,name=iPhone 14,OS=17.0.1' \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
             ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
