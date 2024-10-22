@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User {
+struct UserModel {
     
     var id: UUID
     var email: String
@@ -17,10 +17,10 @@ struct User {
     var dateLastUpdated: Date
     var isActive: Bool = true
     
-    var wealth: Wealth
+    var wealth: WealthModel
     
     // constructor
-    init(id: UUID, email: String, password: String, name: String, dateCreated: Date, dateLastUpdated: Date, isActive: Bool, wealth: Wealth) {
+    init(id: UUID, email: String, password: String, name: String, dateCreated: Date, dateLastUpdated: Date, isActive: Bool, wealth: WealthModel) {
         self.id = id
         self.email = email
         self.password = password

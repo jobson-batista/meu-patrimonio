@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Wealth {
+struct WealthModel {
     var assets: Double
     var liabilities: Double
     var evaluationDate: Date
