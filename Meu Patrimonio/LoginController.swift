@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginController.swift
 //  Meu Patrimonio
 //
 //  Created by Jobson Batista on 19-10-2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginController: UIViewController {
     
     let login = LoginView()
 
@@ -15,7 +15,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         print("Rodando...")
         setupView()
-        // Do any additional setup after loading the view.
     }
     
     private func setupView() {
@@ -23,6 +22,7 @@ class ViewController: UIViewController {
         setHierarchy()
         setContraints()
         setGesture()
+        login.getLoginButtom().addTarget(self, action: #selector(doLogin), for: .touchUpInside)
     }
     
     private func setHierarchy() {
@@ -45,6 +45,15 @@ class ViewController: UIViewController {
      */
     @objc func hideKeyboard() {
         view.endEditing(true)
+    }
+    
+    @objc func doLogin() {
+        if let login = login.getInputEmail().text {
+            print("Login: \(login)")
+        }
+        if let pass = login.getInputPassword().text  {
+            print("Password: \(pass)")
+        }
     }
     
 }
