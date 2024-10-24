@@ -45,3 +45,16 @@ Se você quiser contribuir:
 3. Envie suas alterações: ```git push origin minha-feature```
 4. Abra um Pull Request.
 
+### Imagens do Protótipo
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/user-attachments/assets/91d9d186-11ed-42ca-8088-a14376cae5b4" alt="Tela Login" width="250" />
+  <img src="https://github.com/user-attachments/assets/bfb56f4b-d6f7-4fb6-9412-ada454ec68fd" alt="Tela Cadastro de Usuario" width="250" />
+  <img src="https://github.com/user-attachments/assets/216e45d6-47aa-4313-a1d6-a800e7cd3d3c" alt="Tela de Recuperar Conta" width="250" />
+ <img src="https://github.com/user-attachments/assets/bdf3a89d-6ae5-4310-b83c-2b4f17f491dd" alt="Tela Home" width="250" />
+ <img src="https://github.com/user-attachments/assets/021efeb2-ff9c-4665-a6bb-4f9adbc56d9d" alt="Tela Definir Meta" width="250" />
+ <img src="https://github.com/user-attachments/assets/cdc2f020-7618-4aa5-9ea1-64cfaaeb4f20" alt="Tela Cadastrado de Investimento Mensal" width="250" />
+ <img src="https://github.com/user-attachments/assets/1f55ce73-d190-477c-9ff3-251cd4af8886" alt="Tela Cadastrado de Relatorio" width="250" />
+</div>
+
+
